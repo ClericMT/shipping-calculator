@@ -20,7 +20,7 @@ def calculate_price(amount, stock):
         b = math.floor(r / iter_items[x]) #amount of bundle
         r = r - (b * iter_items[x]) #update remainder stock
         order.append(b) #update order
-        total_price += items[stock][iter_items[x]] * b
+        total_price += items[stock][iter_items[x]] * b #update total price
     print(str(amount) + ' ' + str(stock) + ' $' + str("{:.2f}".format(total_price)))
     for x in range(len(iter_items)):
         if order[x] > 0:
